@@ -1,38 +1,40 @@
 import vehiculos_clase as vc
 
 """ Antiaéreo """
-my_vehicle_SPAAG = vc.Vehiculo("IFV-6a 'Cheetah'", "OTAN", "Antiaereo")
+#my_vehicle_SPAAG = 
 
 """" Artillería """
-my_vehicle_SPG = vc.Vehiculo("2S9 'Sochor'", "CSAT", "Artilleria")
+#my_vehicle_SPG = 
 
 """ Aviones """
-my_vehicle_Fighter = vc.Vehiculo("A-149 'Gryphon'", "AAF", "Avion")
+#my_vehicle_Fighter = 
 
 """ Coches """
-my_vehicle_Car = vc.Vehiculo("Hunter", "OTAN", "Coche")
+#my_vehicle_Car = 
 
 """ Drones """
-my_vehicle_Drone = vc.Vehiculo("KH-3A 'Fenguang'", "CSAT", "Dron")
+#my_vehicle_Drone = 
 
 """ Helicópteros """
-my_vehicle_Helo = vc.Vehiculo("CH-49 'Mohawk'", "AAF", "Helicoptero")
+#my_vehicle_Helo = 
 
 """ Tanques """
-my_vehicle_MBT = vc.Vehiculo("M2A1 'Slammer'", "OTAN", "Carro de combate")
+#my_vehicle_MBT = 
 
 """ Vehiculo de personal """
-my_vehicle_PV = vc.Vehiculo("MSE-3 'Marid'", "CSAT", "Vehiculo de personal")
+#my_vehicle_PV = 
 
+lista_vehiculos = vc.listaVehiculos()
 
-vehicles = [my_vehicle_SPAAG, 
-            my_vehicle_SPG, 
-            my_vehicle_Fighter, 
-            my_vehicle_Car, 
-            my_vehicle_Drone, 
-            my_vehicle_Helo, 
-            my_vehicle_MBT, 
-            my_vehicle_PV]
+lista_vehiculos.addVehiculo(vc.Vehiculo("IFV-6a 'Cheetah'", "OTAN", "Antiaereo"))
+lista_vehiculos.addVehiculo(vc.Vehiculo("2S9 'Sochor'", "CSAT", "Artilleria"))
+lista_vehiculos.addVehiculo(vc.Vehiculo("A-149 'Gryphon'", "AAF", "Avion"))
+lista_vehiculos.addVehiculo(vc.Vehiculo("Hunter", "OTAN", "Coche"))
+lista_vehiculos.addVehiculo(vc.Vehiculo("KH-3A 'Fenguang'", "CSAT", "Dron"))
+lista_vehiculos.addVehiculo(vc.Vehiculo("CH-49 'Mohawk'", "AAF", "Helicoptero"))
+lista_vehiculos.addVehiculo(vc.Vehiculo("M2A1 'Slammer'", "OTAN", "Carro de combate"))
+lista_vehiculos.addVehiculo(vc.Vehiculo("MSE-3 'Marid'", "CSAT", "Vehiculo de personal"))
+
 
 
 """

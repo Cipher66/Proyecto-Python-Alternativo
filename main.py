@@ -12,29 +12,33 @@ print("3. Ver DLC's")
 opcion = input("Escribe tu opcion: ")
 
 if opcion == "1":
-    for i in vo.vehicles:
+    for i in vo.lista_vehiculos.lista:
         print(i)
     opcion_añadir = input("¿Quieres añadir un vehiculo?: ")
     if opcion_añadir == "si":
         nombre = input("Nombre del vehiculo: ")
-        vo.vehicles.append(nombre)
+        vo.lista_vehiculos.lista.append(nombre)
         faccion = input("Faccion del vehiculo: ")
-        vo.vehicles.append(faccion)
+        vo.lista_vehiculos.lista.append(faccion)
         tipo = input("Tipo de vehiculo: ")
-        vo.vehicles.append(tipo)
+        vo.lista_vehiculos.lista.append(tipo)
         filename="historial.txt"
         with open("historial.txt", "a") as myfile:
             myfile.write("\nNombre: "+nombre+" facción: "+faccion+" tipo: "+tipo)
-    for i in vo.vehicles:
+    for i in vo.lista_vehiculos.lista:
         print(i)
     if opcion_añadir == "no":
-        for i in vo.vehicles:
+        for i in vo.lista_vehiculos.lista:
             print(i)
 
-if opcion == "2":
-    for i in dlco.dlc:
-        print(i)
-
 if opcion == "3":
-    for i in dlco.dlc:
+    for i in dlco.lista_expansion.lista:
         print(i)
+    opcionBus = input("¿Quieres filtrar la busqueda? ")
+    if opcionBus == "si":
+        opcionFil = input("Palabra clave: ")
+        print(str.find(opcionFil))
+        
+"""
+Si el find es mayor que cero, imprimir el objeto correspondiente
+"""
