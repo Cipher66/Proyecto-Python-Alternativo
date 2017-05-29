@@ -41,4 +41,9 @@ if opcion == "3":
         
 """
 Si el find es mayor que cero, imprimir el objeto correspondiente
+a = A("uno")
+
+
+if a.name.find("u") > 0:
+    return a
 """
