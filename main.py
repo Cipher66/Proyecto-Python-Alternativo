@@ -37,7 +37,10 @@ if opcion == "3":
     opcionBus = input("¿Quieres filtrar la busqueda? ")
     if opcionBus == "si":
         opcionFil = input("Palabra clave: ")
-        print(str.find(opcionFil))
+        for i in dlco.lista_expansion.lista:
+            print(i.index(opcionFil))
+        #print(dlco.lista_expansion.lista.find(opcionFil))
+        #print(str.find(opcionFil))
         
 """
 Si el find es mayor que cero, imprimir el objeto correspondiente
