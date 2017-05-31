@@ -2,6 +2,7 @@ import vehiculos_objetos as vo
 import vehiculos_clase as vc
 import dlc_objetos as dlco
 import dlc_clase as dlcl
+import os.path
 
 print("Bienvenido a la aplicacion de ArmA III")
 print("¿Que quieres hacer?")
@@ -15,7 +16,19 @@ if opcion == "1":
     for i in vo.lista_vehiculos.lista:
         print(i)
     opcion_añadir = input("¿Quieres añadir un vehiculo? (s/n): ")
+
     if opcion_añadir == "s":
+        print(os.path.isfile("historial.txt"))
+        if os.path.isfile("historial.txt"):
+            opcion = input("Hay un archivo con objetos, ¿Quiéres cargarlos? (s/n)")
+            def func_archivo(opcion, filename):
+                if opcion == "s":
+                    with open(filename) as f:
+                        lines = f.readline()
+                        vo.lista_vehiculos.lista.append(lines)
+                elif opcion == "n":
+                    return("Volviendo al anterior menu")
+            print(func_archivo(opcion))
         nombre = input("Nombre del vehiculo: ")
         faccion = input("Faccion del vehiculo: ")
         tipo = input("Tipo de vehiculo: ")
@@ -23,6 +36,9 @@ if opcion == "1":
         filename="historial.txt"
         with open("historial.txt", "a") as myfile:
             myfile.write("Nombre: "+nombre+" facción: "+faccion+" tipo: "+tipo+"\n")
+        
+
+
     for i in vo.lista_vehiculos.lista:
         print(i)
     if opcion_añadir == "n":
