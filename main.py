@@ -14,8 +14,8 @@ opcion = input("Escribe tu opcion: ")
 if opcion == "1":
     for i in vo.lista_vehiculos.lista:
         print(i)
-    opcion_añadir = input("¿Quieres añadir un vehiculo?: ")
-    if opcion_añadir == "si":
+    opcion_añadir = input("¿Quieres añadir un vehiculo? (s/n): ")
+    if opcion_añadir == "s":
         nombre = input("Nombre del vehiculo: ")
         faccion = input("Faccion del vehiculo: ")
         tipo = input("Tipo de vehiculo: ")
@@ -25,20 +25,24 @@ if opcion == "1":
             myfile.write("Nombre: "+nombre+" facción: "+faccion+" tipo: "+tipo+"\n")
     for i in vo.lista_vehiculos.lista:
         print(i)
-    if opcion_añadir == "no":
+    if opcion_añadir == "n":
         for i in vo.lista_vehiculos.lista:
             print(i)
 
 if opcion == "3":
     for i in dlco.lista_expansion.lista:
         print(i)
-    opcionBus = input("¿Quieres filtrar la busqueda? ")
-    if opcionBus == "si":
+    opcionBus = input("¿Quieres filtrar la busqueda? (s/n): ")
+    if opcionBus == "s":
         opcionFil = input("Palabra clave: ")
 
         for i in dlco.lista_expansion.lista:
             if i.nombre.upper().find(opcionFil.upper())>= 0:
                 print(i)
+            elif i.fecha_salida.upper().find(opcionFil.upper())>= 0:
+                print(i)
+        
+
 
 
 
