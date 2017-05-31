@@ -11,3 +11,7 @@ class listaExpansion():
 
     def addExpansion(self, expansion):
         self.lista.append(expansion)
+
+               
+        
+  
