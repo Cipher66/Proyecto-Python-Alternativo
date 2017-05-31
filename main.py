@@ -24,7 +24,7 @@ if opcion == "1":
         vo.lista_vehiculos.lista.append(tipo)
         filename="historial.txt"
         with open("historial.txt", "a") as myfile:
-            myfile.write("\nNombre: "+nombre+" facción: "+faccion+" tipo: "+tipo)
+            myfile.write("Nombre: "+nombre+" facción: "+faccion+" tipo: "+tipo+"\n")
     for i in vo.lista_vehiculos.lista:
         print(i)
     if opcion_añadir == "no":
@@ -37,11 +37,26 @@ if opcion == "3":
     opcionBus = input("¿Quieres filtrar la busqueda? ")
     if opcionBus == "si":
         opcionFil = input("Palabra clave: ")
-        for i in dlco.lista_expansion.lista:
+        
+        print(opcionFil.find(str(dlco.lista_expansion.lista)))
+        
+        
+        
+        
+        
+        
+        
+        
+        """
+        for i in range(len(dlco.lista_expansion.lista)):
+            if dlco.lista_expansion.lista[i] == opcionFil:
+                print (dlco.lista_expansion.lista[i])
+        """
+        """for i in dlco.lista_expansion.lista:
             print(i.index(opcionFil))
         #print(dlco.lista_expansion.lista.find(opcionFil))
         #print(str.find(opcionFil))
-        
+        """        
 """
 Si el find es mayor que cero, imprimir el objeto correspondiente
 a = A("uno")
