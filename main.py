@@ -4,14 +4,7 @@ import dlc_objetos as dlco
 import dlc_clase as dlcl
 import os.path
 
-#funciones
-def func_archivo(opcion, filename):
-    if opcion == "s":
-        with open(filename, "r") as f:
-            lines = f.readline()
-            vo.lista_vehiculos.lista.append(lines)
-            for i in vo.lista_vehiculos.lista:
-                    print(i)
+
 
 print("Bienvenido a la aplicacion de ArmA III")
 print("¿Que quieres hacer?")
@@ -31,8 +24,16 @@ if opcion == "1":
         print(os.path.isfile("historial.txt"))
         if os.path.isfile("historial.txt"):
             opcion = input("Hay un archivo con objetos, ¿Quiéres cargarlos? (s/n): ")
+            #funciones
+            def func_archivo(opcion, filename):
+                if opcion == "s":
+                    with open(filename, "r") as f:
+                        lines = f.readline()
+                        vo.lista_vehiculos.lista.append(lines)
+                        for i in vo.lista_vehiculos.lista:
+                            print(i)
             print(func_archivo(opcion, filename))
-            
+            pass
         elif opcion == "n":
             print("Volviendo al anterior menu")
             

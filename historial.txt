@@ -1,1 +1,2 @@
 Nombre: M2A4 'Slammer UP', faccion: OTAN, tipo: Carro de combate
+Nombre: FV-720 'Mora', faccion: AAF, tipo: Vehiculo de personal
